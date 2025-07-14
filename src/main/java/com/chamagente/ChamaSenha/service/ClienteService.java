@@ -30,7 +30,11 @@ public class ClienteService {
      }
 
     public ClienteDto findById(Long id) {
-
+        Cliente cliente = clienteRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Cliente" + id + "não encontrado"));
+        return new ClienteDto(cliente.getId(),
+                    cliente.getNome(),
+                    cliente.getCpf());
 }
 
 

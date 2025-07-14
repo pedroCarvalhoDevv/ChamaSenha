@@ -4,5 +4,5 @@ import com.chamagente.ChamaSenha.model.entity.Cliente;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ClienteRepository extends JpaRepository<Cliente , Long> {
-    boolean existsByCpf (int cpf);
+    boolean existsByCpf (String cpf);
 }
