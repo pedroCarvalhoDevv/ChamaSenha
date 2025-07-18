@@ -31,4 +31,7 @@ public class ClienteDto {
         return cpf;
     }
 
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
 }

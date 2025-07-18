@@ -20,8 +20,12 @@ public class ClienteController {
     public ClienteDto create(@RequestBody ClienteDto clienteDto){
         return clienteService.create(clienteDto);
     }
+    @GetMapping("/findAll")
+    List<ClienteDto> findAll(){
+        return clienteService.findAll();
+    }
 
-    @GetMapping("/findById{id}")
+    @GetMapping("/findById/{id}")
     public ClienteDto findById(@PathVariable Long id){
         return clienteService.findById(id);
     }
